@@ -1,0 +1,65 @@
+function val=dTagConst(constName)
+
+switch constName
+% H_CMD_PPG code is 0x02
+    case 'H_CMD_PPG'
+        val = int16(2);
+
+%dTag Register map define
+
+%dTag Register   REG_MAP_CFMODE   1
+case 'REG_MAP_CFMODE'
+       val = int16(1);
+%dTag Register   REG_MAP_AD_RATE  2
+case 'REG_MAP_AD_RATE'
+       val = int16(2);
+%dTag Register   REG_MAP_AD_CH    3
+case 'REG_MAP_AD_CH'
+       val = int16(3);
+%dTag Register   REG_MAP_AD_PGA	  4
+case 'REG_MAP_AD_PGA'
+       val = int16(4);
+%dTag Register   REG_MAP_DA_IR    5
+case 'REG_MAP_DA_IR'
+       val = int16(5);
+%dTag Register   REG_MAP_DA_R	  6
+case 'REG_MAP_DA_R'
+       val = int16(6);
+%dTag Register   REG_MAP_DA_G	  7
+case 'REG_MAP_DA_G'
+       val = int16(7);
+%dTag Register   REG_MAP_OPA_GAIN 8
+case 'REG_MAP_OPA_GAIN'
+       val = int16(8);
+%dTag Register   REG_MAP_OPA_SW0  9
+case 'REG_MAP_OPA_SW0'
+       val = int16(9);
+%dTag Register   REG_MAP_OPA_SW1  10
+case 'REG_MAP_OPA_SW1'
+       val = int16(10);
+%dTag Register   REG_MAP_OPA_SW2  11
+case 'REG_MAP_OPA_SW2'
+       val = int16(11);
+%dTag Register   REG_MAP_CFUN     12
+case 'REG_MAP_CFUN'
+       val = int16(12);
+%dTag Register   REG_MAP_COP      13
+case 'REG_MAP_COP'
+       val = int16(13);
+%dTag Register   REG_MAP_MAX      13
+case 'REG_MAP_MAX'
+       val = int16(13);    
+
+%dTag control  FUN_ADC_BIT            0x10
+case 'FUN_ADC_BIT'
+       val = int16(13);   
+
+%dTag control  DEV_FUN_START			0x01
+
+%dTag control  DATA_RAW				0x02
+
+    otherwise
+
+        val = int16(-1);
+
+end

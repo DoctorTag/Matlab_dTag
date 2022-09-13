@@ -1,0 +1,28 @@
+    function [resData = startSensorFunction(con,funCmd,funPara,waitRes)
+
+    resData = [];
+    if con >= 0
+        if ~ischar(funCmd)
+            error('funCmd must be char')
+        end
+    
+        cmdID = dTagConst(funCmd);
+        
+        if cmdID < 0
+            error('Get cmdID error,please confirm that funCmd is correct')
+        end
+    
+        if isempty(funPara)
+            error('funPara can not be null')
+        end
+    
+        pnet(con,'write' ,frameEncode(uint8(cmdID),funPara));
+        if waitRes > 0
+                raw=pnet(con,'read' ,'uint8');
+                if ~isempty(raw)
+                [~,rxdata,rlen] = frameDecode(raw,0);
+
+        end
+    else
+        error('TcpHandle is null')
+    end
