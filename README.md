@@ -1,20 +1,14 @@
-# PC Demo_labwindows_cvi
-PC demo software of Bio-Sensor--F58GM  about labwindows cvi 2017, Part of development Kits for BioSensor. 
+# Evaluation Tool using Matlab
+PC demo software of Bio-Sensor--F58  about Matlab 2022, Part of development Kits for BioSensor. 
 
 For whole project, please refer to [https://github.com/doctorTag](https://github.com/doctorTag).
 
 # How to install
-If you don't hope to compile the project with LabWindows CVI 2017,then you can directly run setup.exe to install it.
 
-1. Clone the repository:
-
-```
-git clone --recursive https://github.com/doctorTag/bioDemo_labwindows_cvi
+Clone the repository:
 
 ```
-2. Run the setup.exe located:
-```
-%project-root%\bioDemo_labwindows_cvi\cvidistkit.BioSensor_cvi\Volume
+git clone --recursive https://github.com/doctorTag/Matlab_dTag
 
 ```
 
